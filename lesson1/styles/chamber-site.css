@@ -1,0 +1,31 @@
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font: 1em sans-serif;
+}
+h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font: 1em sans-serif;
+}
+p {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font: sans-serif;
+
+}
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
