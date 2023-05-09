@@ -1,8 +1,4 @@
-const today = new Date();
-const currentYear = document.querySelector("#currentyear");
-currentYear.textContent = today.getFullYear();
-
-const lastupdated = document.querySelector("#lastupdated");
-lastupdated.textContent = document.lastModified;
+requestAnimationFrame(() => { document.querySelector("#year_container").innerHTML = new Date().getFullYear() });
+requestAnimationFrame(() => { document.querySelector("#lastModified").innerHTML = "Last Modification: " + document.lastModified });
 
 
