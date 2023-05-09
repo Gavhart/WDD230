@@ -22,6 +22,10 @@
         </div>
     </header>
     <nav class="nav">
+        <button class="mobile-toggle" id="mobile-toggle">
+            <img class="icon active" src="images/hamburger.svg" alt="Icon to open the mobile menu" width="52" height="52">
+            <img class="icon " src="images/close.svg" alt="Icon to close the mobile menu" width="52" height="52">
+        </button>
         <ul class="contents">
             <li class="item"><a class="page_link active" href="index.html">Home</a></li>
             <li class="item"><a class="page_link active" href="#">Chamber</a></li>
@@ -31,6 +35,11 @@
     </nav>
     <main class="s-home">
         <h2 class="course_title">WDD 230: Web Frontend Development</h2>
+        <button class="theme-toggle" id="theme-toggle">
+            <img class="icon active" id="dark-theme-toggle" src="images/moon.png" alt="Icon to toggle dark theme on" width="52" height="52">
+            <img class="icon" id="light-theme-toggle" src="images/vector-sun-icon.jpg" alt="Icon to toggle light theme on" width="52" height="52">
+        </button>
+        
         
         <section class="card learning_activites">
             <h3 class="title">Learning Activities</h3>
@@ -88,5 +97,6 @@
         <p class="text last_modified" id="lastModified">Last Modification: 04/20/2023 08:50:30</p>
     </footer>
     <script src="scripts/getDates.js"></script>
+    <script src="scripts/main.js"></script>
 </body>
 </html>
