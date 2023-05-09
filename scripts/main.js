@@ -14,3 +14,9 @@ mobileToggle.addEventListener("click", () => {
     });
     mobileToggle.parentElement.querySelector(".contents").classList.toggle("open");
 });
+
+const thumbnails = document.querySelectorAll('.thumbnails img');
+const lightbox = document.querySelector('.lightbox');
+const lightboxImg = document.createElement('img');
+const lightboxCaption = document.createElement('p');
+
