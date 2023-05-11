@@ -28,6 +28,9 @@ footer {
     text-align: center;
     background-color: #167973;
     color: white;
+    height: 40vh;
+    padding: 1rem;
+    padding-bottom: 4px;
 }
 
 footer {
@@ -141,4 +144,8 @@ td, th{
 .expand-menu li:first-child a{
     color: #111111;
     text-decoration: none;
+}
+img {
+    width: 40%;
+    
 }
