@@ -53,35 +53,34 @@
   
     <h2 id="directory">Discover</h2>
     <h3>Check out these places out</h3>
-    <img src="images/list.svg" alt="list view" width="34" height="34" onclick="list()">
-    <img src="images/grid.svg" alt="grid view" width="34" height="34" onclick="grid()">
-  
-    <div class="column">
-      <h3>Photos</h3>
-      <div class="photo-container">
-        <img src="images/red-salmon.jpeg" alt="Photo 1" width="200" height="150">
-        <img src="images/kenai-river-fall.webp" alt="Photo 2" width="200" height="150">
-        <img src="images/wooden-log-near-body-of-water.jpg" alt="Photo 3" width="200" height="150">
+    <main>
+      <div class="sidebar">
+        <!-- Sidebar content goes here -->
       </div>
+      <div class="main-content">
+        <!-- Main content with lazy-loaded images goes here -->
+      </div>
+    </main>
+    <div class="main-content">
+      <img class="lazy" src="images/USA-Alaska-Seward-pier-boats-on-edge-of-Resurrection-Bay-blog-564984847-ss-800x450-1.jpg" alt="Bear">
+      <img class="lazy" src="images/wooden-log-near-body-of-water.jpg" alt="Log">
+      <!-- Add more lazy-loaded images as needed -->
     </div>
     
   
-    <div class="column">
-      <h3>Calendar</h3>
-      <!-- Add your calendar code here -->
-      <p>Placeholder for the calendar</p>
-    </div>
-  
     <!-- From directory.js local json file -->
     <div class="data"></div>
+    <div class="grid"></div>
+
   
   </div>
   
 
   </div>
-  <script src="scripts/directory.js"></script>
+  <script src="scripts/localstorage.js"></script>
   <script src="scripts/gridlist.js"></script>
   <script src="scripts/navigation.js"></script>
+  
 
 
   <footer>
