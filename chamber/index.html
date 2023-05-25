@@ -1,57 +1,195 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kenai Chamber of Commerence</title>
-    <meta name="description" content="Site about the weather report" />
-    <link href="https://fonts.googleapis.com/css?family=Comfortaa|Kodchasan&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="images/favicon.ico">
-    <link rel="stylesheet" href="styles.css/css/normalize.css" />
-    <link rel="stylesheet" href="styles.css/css/small.css" />
-    <link rel="stylesheet" href="styles.css/css/medium.css" />
-    <link rel="stylesheet" href="styles.css/css/large.css" />
-    <script src="https://api.weatherapi.com/v1/c23318d44d8a4282b019788479e53977.js"></script>
+<!doctype html>
+<html lang="en-us">
 
-  </head>
-  <body>
-    <header>
-      <img src="images/commerce logo.png" alt="logo fishy website">
-    </header>
-    <nav>
-      <ul>
-        <li><a href="#!" id="navBtn">&#9776; Menu</a></li>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Discover</a></li>
-        <li><a href="#">Gallery</a></li>
-        <li><a href="#">Fish Haven</a></li>
-        <li><a href="#">Storm Center</a></li>
-    </nav>
-    <main>
-      <h1>Kenai Chamber of Commerence</h1>
-      <h2>Kenai Alaska</h2>
-      <div class="cards">
-        <div class="card">
-          <h3>Hero w/Fish stream message</h3>
-        </div>
-        <div class="card">
-          <h3>5 day forecast</h3>
-        </div>
-        <div class="card">
-          <h3>Article</h3>
-        </div>
-        <div class="card">
-          <h3>Contact us</h3>
-        </div>
-      </div>
-    </main>
-    <footer class="footer">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Gavin Hart">
+  <meta name="description" content="City Web Development for BYU Idaho, WDD230">
+  <title>Kenai Chamber of Commerce</title>
+  <link
+  href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Delius+Unicase:wght@700&family=Didact+Gothic&display=swap"
+  rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  <link rel="icon" type="image/png" href="images/images/favicon.ico">
+  <link href="styles/large.css" rel="stylesheet" />
+  <link href="styles/medium.css" rel="stylesheet" />
+  <link href="styles/small.css" rel="stylesheet" />
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="./index.html">Home</a>
+    <a href="discover.html">Discover</a>
+    <a href="joinus.html">Join us</a>
+
+    <p id="contactinfo">
+      Kenai, Co.<br><br>
+      📪 300 Main Street, Kenai, AK <br>
+      💻 kenai@kcc.com<br>
+      📞 907-313-8520 <br>
+    </p>
+
+    <a href="https://www.instagram.com/">
+      <img src="images/instagram.svg" alt="Instagram camera Icon" width="64" height="64" />
+    </a>
+    <a href="https://www.facebook.com">
+      <img src="images/facebook.svg" alt="Facebook letter F Icon" width="64" height="64" />
+    </a>
+  </div>
+
+
+  <div id="scoot">
+    <div class="title">
+      <a href="index.html"><img src="images/commerce-black-logo.png" alt="Kenai Logo" width="80" height="80"></a>
+      <h1 class="kenai">Kenai.co</h1>
+      <h2 class="subheading">Unite The Community</h2>
+    </div>
+
+    <span id="opennav" onclick="openNav()">&#9776; Menu</span>
+    <p></p>
+    <div class="parallax"></div>
+
+    <button type="button" class="collapsible">
+      Kenai's Rich History
+    </button>
+    <div class="content">
       <p>
-          &copy; 2023 | Gavin Hart | USA | <a href="https://byui.edu/" target="_blank">BYUI Online Learning</a>
+        <H4>
+          Kenai City History</H4>
+        <p>
+          Kenai is a city in the Kenai Peninsula Borough in the U.S. state of Alaska. The population was 7,100 as of the
+          2010 census, up from 6,942 in 2000.
+        </p>
+        <p>
+          The city of Kenai is named after the local Dena'ina (Tanaina) word 'ken' or 'kena', which means 'flat, meadow,
+          open area with few trees; base, low ridge', according to the Dena'ina Topical Dictionary by James Kari, Ph.D.,
+          published in 2007. This describes the area along the mouth and portion of the Kenai River near the City of
+          Kenai. Archaeological evidence suggests that the area was first occupied by the Kachemak people from 1000 B.C.,
+          until they were displaced by the Dena'ina Athabaskan people around 1000 A.D. Before the arrival of the
+          Russians, Kenai was a Dena'ina village called Shk'ituk't, meaning 'where we slide down.' When Russian fur
+          traders first arrived in 1741, about 1,000 Dena'ina lived in the village. The traders called the people
+          'Kenaitze', which is a Russian term for 'people of the flats', or 'Kenai people'. This name was later adopted
+          when they were incorporated as the Kenaitze Indian Tribe in the early 1970s.
+        </p>
+        <p>
+          In 1786 Pytor Zaikov built Fort Nikolaevskaia for the Lebedev-Lastochkin Company on the site of modern Kenai,
+          being the first European settlement on the Alaskan mainland. Hostilities surfaced between the natives and
+          settlers in 1797, culminating in an incident in which the Dena'ina attacked Fort St. Nicholas, later dubbed
+          the battle of Kenai. Over one hundred deaths occurred from all involved parties. Later, in 1838, the
+          introduction of smallpox killed one half of the Dena'ina population.
+        </p>
+        <p>
+          In 1869, after the Alaska Purchase, the United States Army established a post called Fort Kenay. It was soon
+          abandoned.
+        </p>
+        <p>
+          In 1888 a prospector named Alexander King discovered gold on the Kenai Peninsula. The amount of gold was small
+          compared to the later gold finds in the Klondike, Nome and Fairbanks. In 1895-96, the Holy Assumption of the
+          Virgin Mary Russian Orthodox Church was built in the village. It is still in use today. The establishment of
+          shipping companies in the early 1900s broadened Kenai into a port city. Canning companies were established
+          and helped fuel the commercial fishing boom that was the primary activity through the 1920s.
+        </p>
+        <p>
+          In 1911, construction began on the Kenai Railroad (now Alaska Railroad) connecting Kenai to the coal fields
+          of the upper Cook Inlet. The project stalled for years from lack of funding until President Woodrow Wilson
+          authorized completion of the railroad in 1915. The first scheduled train from Seward arrived in Kenai on July
+          1, 1915, carrying 300 passengers, 117 mules, and 10 cars of freight and mail. In 1916, the U.S. Navy
+          established a radio station in Kenai to maintain communications with the rest of the world. A post office was
+          established in 1922 and the city incorporated in 1960.
+        </p>
+        <p>
+          Oil was discovered in nearby Swanson River in 1957, bringing some economic development to the area. In 1965,
+          offshore oil discoveries in Cook Inlet caused a period of rapid growth. Many citizens of the City of Kenai
+          work for and depend on the oil industry. The construction of offshore oil platforms in Cook Inlet had a
+          "ripple effect" and a number of support industries sprang up in Kenai. Oil and gas exploration are still
+          important parts of the local economy. Kenai has a municipal airport with a 7,000-foot (2,100 m) long paved
+          runway (airport code ENA), a number of paved and gravel roads, and offer a variety of services.
+        </p>
+        <p>
+          Kenai and the neighboring city of Soldotna cooperate to provide housing and support infrastructure for
+          workers and families employed in the oil industry on the Kenai Peninsula. There are several state and
+          private-owned facilities for lodging and meals in the Kenai-Soldotna area. Kenai has a public school system
+          with grades pre-K-12. The Kenai Peninsula Borough School District is the largest school district in the state
+          and the Kenai Peninsula Borough is the largest borough in the United States. Kenai has three public schools:
+          Mt. View Elementary, Kenai Middle School, and Kenai Central High School. There are also two private schools
+          located in Kenai: Aurora Borealis Charter School and Grace Lutheran School.
+        </p>
+        <p>
+          Kenai has a climate that is strongly influenced by the Cook Inlet and the neighboring Kenai Mountains. The
+          climate is characterized by long, cold winters and short, mild summers. Kenai has a wide variation between
+          temperatures during summer and winter. The average high temperature during July is usually about 65 °F (18
+          °C) but often rises to 80 °F (27 °C) or more. The average high temperature during January is about 25 °F (−4
+          °C). Snowfall averages 63 inches (160 cm) per year, with the heaviest snowfalls occurring during the months
+          of October through March. Kenai has a frost-free growing season that averages slightly over 101 days.
+        </p>
+        <p>
+          Kenai is located at 60°33′31″N 151°13′47″W﻿ / ﻿60.55861°N 151.22972°W﻿ / 60.55861; -151.22972 (60.558738,
+          -151.229616). According to the United States Census Bureau, the city has a total area of 35.5 square miles
+          (92 km2), of which, 29.9 square miles (77 km2) of it is land and 5.6 square miles (15 km2) of it (15.84%) is
+          water.
+        </p>
+        <p>
+          Kenai has a subarctic climate (Köppen Dfc) with mild winters compared to the interior, due to the close
+          proximity to the ocean. The highest temperature ever recorded at Kenai was 96 °F (36 °C) on July 14, 1975,
+          tied with Anchorage on the same day. The lowest temperature ever recorded was −48 °F (−44 °C) on February 4,
+          1947. Average annual precipitation is 16.85 inches (428 mm). Snowfall averages 63 inches (160 cm) per year,
+          with the heaviest snowfalls occurring during the months of October through March. Kenai has a frost-free
+          growing season that averages slightly over 101 days.
+        </p>
+
+
+    </div>
+
+    <button type="button" class="collapsible">
+      Weather Alerts
+    </button>
+    <div class="content">
+      <p>
+        <h4>Weekly Weather:</h4>
+
+        <h4>Monday</h4>
+        <img src="images/wooden-log-near-body-of-water.jpg" alt="Sunny Icon" width="64" height="64" />
+        <p>High: 75</p>
+        <p>Low: 55</p>
+        <p>Wind: 5 mph</p>
+        <p>Humidity: 20%</p>
+    </div>
+
+    <button type="button" class="collapsible">
+      This Weeks Activities
+    </button>
+    <div class="content">
+      <p>
+        This weekks Activities include breakfast at the local park. Food will be prepared by local chefs and will be a fun time for all.
+        <br>
+        <br>
+        <img src="images/bear-kenai.jpeg" alt="Sunny Icon" width="64" height="64" />
+    </div>
+    <button type="button" class="collapsible">
+      This Weeks photography from the locals
+    </button>
+    <div class="photography">
+      <p>
+<img src="./images/red-salmon.jpeg" alt="red salmon">
       </p>
-      <p class="last-update" id="currentDate"></p>
-    </footer>
-    <script src="script.js/last-modified.js" ></script>
-    <script src="script.js/responsive-menu.js" defer></script>
-  </body>
+    </div>
+    <div class="parallax"></div>
+  </div>
+  <script src="scripts/navigation.js"></script>
+  <script src="scripts/city.js"></script>
+  <footer>
+    <p>
+      &copy; <span id="copyrightyear"></span> | Gavin Hart | USA |
+      <a href="https://www.byui.edu/">BYUI Online Learning
+      <span id="updated"></span>
+    </p>
+  </footer>
+  <script src="scripts/getdate.js"></script>
+</body>
+
 </html>
