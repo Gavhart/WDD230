@@ -8,15 +8,12 @@
   <meta name="author" content="Gavin Hart">
   <meta name="description" content="Directory Web Development for BYU Idaho, WDD230">
   <title>Kenai Chamber of Commerce</title>
-  <link
-  href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Delius+Unicase:wght@700&family=Didact+Gothic&display=swap"
-  rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Delius+Unicase:wght@700&family=Didact+Gothic&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-  <link rel="icon" type="#" href="images/favicon.ico">
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
   <link href="styles/large.css" rel="stylesheet" />
   <link href="styles/medium.css" rel="stylesheet" />
   <link href="styles/small.css" rel="stylesheet" />
-  
 </head>
 
 <body>
@@ -47,82 +44,94 @@
       <h1 class="kenai">Kenai.co</h1>
       <h2 class="subheading">Unite The Community</h2>
     </div>
-  
+
     <span id="opennav" onclick="openNav()">&#9776; Menu</span>
-    <p></p>
-  
+
     <h2 id="directory">Discover</h2>
     <h3>Check out these places</h3>
-    <main>
-      <div class="sidebar">
-        <!-- Sidebar content goes here -->
-        <div class="sidebar">
-          <!-- Column 1: Calendar -->
-          <div class="calendar">
-            <h3>Calendar</h3>
-            <iframe src="https://calendar.google.com/calendar/embed?src=kenaichamberofcommerce%40gmail.com&ctz=America%2FAnchorage" style="border: 0" width="200%" height="300" frameborder="0" scrolling="no"></iframe>
-          </div>
-        
-          <!-- Column 2: Sidebar content -->
-          <div class="sidebar-content">
-            <!-- Add sidebar content here -->
-          </div>
-        </div>
-        </main>
-        
-     
-  
+
     <!-- From directory.js local json file -->
     <div class="data"></div>
     <div class="grid"></div>
 
-  
   </div>
-  
-
-  </div>
-  <script src="scripts/localstorage.js"></script>
-  <script src="scripts/gridlist.js"></script>
-  <script src="scripts/navigation.js"></script>
-
-  <div class="gallery">
-    <div class="photo">
-      <img src="./images/kenai-river-fall.webp" alt="Photo 1">
-      <div class="caption">Eagle Landing</div>
-    </div>
-    <div class="photo">
-      <img src="./images/salmon-lots-web.webp" alt="Photo 2">
-      <div class="caption">Kenai River flows out to the ocean</div>
-    </div>
-    <div class="photo">
-      <img src="images/wooden log.webp" alt="Photo 3">
-      <div class="caption">Soldotna Lake</div>
-    </div>
-    <!-- Add more photos as needed -->
+  <!-- Navigation -->
+  <div id="mySidenav" class="sidenav">
+    <!-- Navigation content -->
   </div>
 
-  <div class="lightbox">
-    <span class="close">&times;</span>
-    <img class="lightbox-image" src="">
-    <div class="caption"></div>
+  <div id="scoot">
+    <!-- Page content -->
   </div>
+
+  <main>
+    <div class="gallery">
+      <div class="photo">
+        <img src="./images/kenai-river-fall.webp" alt="Photo 1" loading="lazy">
+        <div class="caption">Eagle Landing</div>
+      </div>
+      <div class="photo">
+        <img src="./images/salmon-lots-web.webp" alt="Photo 2" loading="lazy">
+        <div class="caption">Kenai River flows out to the ocean</div>
+      </div>
+      <div class="photo">
+        <img src="images/wooden log.webp" alt="Photo 3" loading="lazy">
+        <div class="caption">Soldotna Lake</div>
+      </div>
+      <!-- Add more photos as needed -->
+    </div>
+    <div class="sidebar">
+      <!-- Sidebar content goes here -->
+      <div class="sidebar">
+        <!-- Column 1: Calendar -->
+        <div class="calendar">
+          <iframe src="https://calendar.google.com/calendar/embed?src=kenaichamberofcommerce%40gmail.com&ctz=America%2FAnchorage" style="border: 0" width="75%" height="250" frameborder="0" scrolling="no"></iframe>
+        </div>
+        <div class="video">
+          <iframe width="75%" height="315" src="https://www.youtube.com/embed/CjKqWRxaOWA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+       <!-- Accordion section -->
+    <div class="accordion">Accordion 1</div>
+    <div class="panel">
+      <p>Content for Accordion 1</p>
+    </div>
+
+    <div class="accordion">Accordion 2</div>
+    <div class="panel">
+      <p>Content for Accordion 2</p>
+    </div>
+
+    <div class="accordion">Accordion 3</div>
+    <div class="panel">
+      <p>Content for Accordion 3</p>
+    </div>
+    </div>
+
+    <div class="lightbox">
+      <span class="close">&times;</span>
+      <img class="lightbox-image" src="">
+      <div class="caption"></div>
+    </div>
+  </main>
+
+
 
   <script src="scripts/lightbox.js"></script>
   <script src="scripts/localstorage.js"></script>
   <script src="scripts/gridlist.js"></script>
   <script src="scripts/navigation.js"></script>
   <script src="scripts/getdate.js"></script>
-
+  <script src="scripts/lazyload.js"></script>
+  <script src="scripts/script.js"></script>
   
-</body>
+
   <footer>
     <p>
       &copy; <span id="copyrightyear"></span> | Gavin Hart | USA |
-      <a href="https://www.byui.edu/">BYUI Online Learning
+      <a href="https://www.byui.edu/">BYUI Online Learning</a>
       <span id="updated"></span>
     </p>
   </footer>
-  
-
+</body>
 
 </html>

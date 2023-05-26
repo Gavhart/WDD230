@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en-us">
 
 <head>
@@ -9,51 +9,39 @@
     <meta name="description" content="Join Us Web Development for BYU Idaho, WDD230-01">
     <title>Kenai Chamber of Commerce</title>
 
-    <link
-    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Delius+Unicase:wght@700&family=Didact+Gothic&display=swap"
-    rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Delius+Unicase:wght@700&family=Didact+Gothic&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="icon" type="image/png" href="favicon.ico">
     <link href="styles/large.css" rel="stylesheet" />
     <link href="styles/medium.css" rel="stylesheet" />
     <link href="styles/small.css" rel="stylesheet" />
-
 </head>
 
 <body>
-
     <!-- Navigation -->
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <a href="index.html">Home</a>
-        <a href="discover.html">discover</a>
-        <a href="joinus.html" class="active">Join us</a>
-
-
-
-        <a href="https://www.instagram.com/">
-            <img src="images/instagram.svg" alt="Instagram camera Icon" width="64" height="64" />
-        </a>
-        <a href="https://www.facebook.com">
-            <img src="images/facebook.svg" alt="Facebook letter F Icon" width="64" height="64" />
-        </a>
+        <a href="discover.html">Discover</a>
+        <a href="joinus.html" class="active">Join Us</a>
+        <a href="https://www.instagram.com/"><img src="images/instagram.svg" alt="Instagram camera Icon" width="64" height="64" /></a>
+        <a href="https://www.facebook.com"><img src="images/facebook.svg" alt="Facebook letter F Icon" width="64" height="64" /></a>
     </div>
     <div id="scoot">
         <div class="title">
             <a href="index.html"><img src="images/commerce-black-logo.png" alt="blacked logo" width="80" height="80"></a>
             <h1 class="kenai">Kenai.co</h1>
             <h2 class="subheading">Unite The Community</h2>
-          </div>
+        </div>
 
         <span id="opennav" onclick="openNav()">&#9776; Menu</span>
 
         <main>
             <div class="block">
                 <h2 id="joinus">Join the Kenai City Chamber of Commerce</h2>
-                <h3>Our purpose is to grow closer together by supporting one another. We strive to create a healthy &
-                    thriving community.</h3>
-                
+                <h3>Our purpose is to grow closer together by supporting one another. We strive to create a healthy &amp; thriving community.</h3>
             </div>
+
             <div id="grid">
                 <div class="goals">
                     <ul>
@@ -73,30 +61,36 @@
                         <fieldset>
                             <legend>Contact Information</legend>
                             <label>First Name
-                                <input pattern="[A-Za-z]{.2}" class="required" type="text" name="fname"
-                                    placeholder="Maria" required></label>
+                                <input pattern="[A-Za-z]{.2}" class="required" type="text" name="fname" placeholder="Maria" required>
+                            </label>
                             <label>Last Name
-                                <input pattern="[A-Za-z]{.2}" class="required" type="text" name="lname"
-                                    placeholder="Lopez" required></label>
+                                <input pattern="[A-Za-z]{.2}" class="required" type="text" name="lname" placeholder="Lopez" required>
+                            </label>
                             <label>Title
-                                <input pattern="[A-Za-z]{.2}" type="text" name="title" placeholder="Engineer"></label>
+                                <input pattern="[A-Za-z]{.2}" type="text" name="title" placeholder="Engineer">
+                            </label>
                             <label>Email
-                                <input type="email" class="required" name="email" placeholder="user@email.com"
-                                    required></label>
+                                <input type="email" class="required" name="email" placeholder="user@email.com" required>
+                            </label>
                             <label>Cell Phone Number &nbsp;&nbsp;
-                                <input type="tel" name="phone" placeholder="###-###-####"></label>
+                                <input type="tel" name="phone" placeholder="###-###-####">
+                            </label>
                         </fieldset>
 
                         <fieldset>
                             <legend>Business Details</legend>
                             <label>Business Name: &nbsp;&nbsp;
-                                <input class="required" type="text" name="bname" required></label>
+                                <input class="required" type="text" name="bname" required>
+                            </label>
                             <label>Business Address: &nbsp;&nbsp;
-                                <input type="text" name="address"></label>
+                                <input type="text" name="address">
+                            </label>
                             <label>Website: &nbsp;&nbsp;
-                                <input type="text" name="web"></label>
+                                <input type="text" name="web">
+                            </label>
                             <label>Business Description: &nbsp;&nbsp;
-                                <input type="text" name="detail"></label>
+                                <input type="text" name="detail">
+                            </label>
 
                             <label>
                                 <select name="levels" id="selectlevel" onchange="selectResponse()">
@@ -109,7 +103,6 @@
                             </label>
 
                             <table>
-
                                 <tr>
                                     <th>Level</th>
                                     <th>Directory</th>
@@ -156,16 +149,18 @@
                     </form>
                 </div>
             </div>
-
         </main>
+
         <script src="scripts/navigation.js"></script>
+
         <footer>
             <p>
                 &copy; <span id="copyrightyear"></span> | Gavin Hart | USA |
-                <a href="https://www.byui.edu/">BYUI Online Learning
+                <a href="https://www.byui.edu/">BYUI Online Learning</a>
                 <span id="updated"></span>
             </p>
         </footer>
+
         <script src="scripts/getdate.js"></script>
     </div>
 </body>
