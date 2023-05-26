@@ -302,13 +302,6 @@ footer {
   color: black;
 
 }
-main {
-  display: grid;
-  grid-template-columns: 1fr 2fr; /* Adjust the column sizes as needed */
-  gap: 50px; /* Adjust the gap between sidebar and main content as needed */
-  padding: 20px; /* Adjust the padding as needed */
-
-}
 
 .lazy {
   max-width: 300px;
@@ -508,7 +501,7 @@ tr:nth-child(odd) {
 }
 
 .photo-container img {
-  width: 200px;
+  width: 100px;
   height: 150px;
   margin: 5px;
   transition: transform 0.3s ease;
@@ -523,18 +516,12 @@ tr:nth-child(odd) {
   text-align: left;
   grid-template-rows: auto;
 }
-.gallery {
-  
-  gap: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-}
 
 .gallery img {
-  width: 100%;
   height: auto;
   cursor: pointer;
+  transition: transform 0.3s ease;
+  flex-direction: column wrap;
 }
 
 .lightbox {
@@ -601,7 +588,6 @@ tr:nth-child(odd) {
   .photo {
     width: 100%;
     height: auto;
-    max-width: 300px;
     padding: 5px;
     box-sizing: border-box;
   }
@@ -615,6 +601,7 @@ tr:nth-child(odd) {
     margin-bottom: 10px;
     cursor: pointer;
     padding-left: 20px;
+    display: flex;
   }
   
   .calendar iframe {
@@ -627,51 +614,11 @@ tr:nth-child(odd) {
     padding-bottom: 20px;
   }
   
-  .calendar {
-    flex: 1;
-    flex: none;
-    width: 50%;
-  }
-  
   .sidebar-content {
     flex: 1;
     flex: none;
     width: 50%;
     
-  }
-  .video {
-    margin-bottom: 10px;
-    cursor: pointer;
-    padding-left: 20px;
-  }
-  .accordion {
-    background-color: #f9f9f9;
-    color: #444;
-    cursor: pointer;
-    padding: 18px;
-    width: 100%;
-    border: none;
-    text-align: left;
-    outline: none;
-    font-size: 16px;
-    transition: 0.4s;
-  }
-
-  .accordion.active,
-  .accordion:hover {
-    background-color: #ddd;
-  }
-
-  .accordion::after {
-    content: '\002B';
-    color: #777;
-    font-weight: bold;
-    float: right;
-    margin-left: 5px;
-  }
-
-  .accordion.active::after {
-    content: "\2212";
   }
 
   .panel {
@@ -680,13 +627,27 @@ tr:nth-child(odd) {
     display: none;
     overflow: hidden;
   }
-
-  /* Media query for mobile devices */
-  @media (max-width: 600px) {
-    .accordion {
-      width: 100%;
-    }
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
   }
+  
+  .gallery {
+    grid-column: span 2;
+  }
+  
+  .calendar,
+  .video {
+    width: 100%;
+  }
+  
+  .photo {
+    margin-bottom: 20px;
+  }
+  
+   
 }
+
 
 

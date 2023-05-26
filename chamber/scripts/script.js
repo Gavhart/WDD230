@@ -1,28 +1,31 @@
-// Get the current date
-var currentDate = new Date();
+// JavaScript file (script.js)
 
-// Get the last visit date from localStorage
-var lastVisitDate = localStorage.getItem('lastVisitDate');
+document.addEventListener("DOMContentLoaded", function() {
+  // Check if localStorage is supported by the browser
+  if (typeof(Storage) !== "undefined") {
+    // Check if the user has visited before
+    if (localStorage.getItem("lastVisit")) {
+      const lastVisitTimestamp = localStorage.getItem("lastVisit");
+      const currentTimeStamp = new Date().getTime();
+      const oneDayInMillis = 24 * 60 * 60 * 1000; // Number of milliseconds in a day
 
-if (!lastVisitDate) {
-  // First visit
-  localStorage.setItem('lastVisitDate', currentDate);
-  displayMessage("Welcome! Let us know if you have any questions.");
-} else {
-  // Calculate the time difference in milliseconds
-  var timeDiff = currentDate - new Date(lastVisitDate);
+      // Calculate the number of days between visits
+      const daysSinceLastVisit = Math.floor((currentTimeStamp - lastVisitTimestamp) / oneDayInMillis);
 
-  // Convert the time difference to days
-  var daysDiff = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+      // Display the appropriate message based on the number of days
+      if (daysSinceLastVisit === 0) {
+        document.getElementById("sidebar-content").textContent = "Back so soon! Awesome!";
+      } else {
+        const message = daysSinceLastVisit === 1 ? "day" : "days";
+        document.getElementById("sidebar-content").textContent = "You last visited " + daysSinceLastVisit + " " + message + " ago.";
+      }
+    } else {
+      // First visit
+      document.getElementById("sidebar-content").textContent = "Welcome! Let us know if you have any questions.";
+    }
 
-  if (daysDiff === 0) {
-    // Less than a day since the last visit
-    displayMessage("Back so soon! Awesome!");
-  } else {
-    // More than a day since the last visit
-    localStorage.setItem('lastVisitDate', currentDate);
-    var message = "You last visited " + daysDiff + " " + (daysDiff === 1 ? "day" : "days") + " ago.";
-    displayMessage(message);
+    // Store the current visit timestamp in localStorage
+    localStorage.setItem("lastVisit", new Date().getTime());
   }
-}
+});
 

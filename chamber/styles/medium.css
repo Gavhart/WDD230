@@ -15,7 +15,7 @@
   
     /* CONTACT PAGE */
     .board {
-      grid-template-columns: 1fr 1fr;
+      display: block;
     }
   
     /* JOIN US PAGE */
