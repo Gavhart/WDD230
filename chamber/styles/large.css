@@ -28,6 +28,10 @@ h3 {
 .block {
   border: 5px dotted black;
   padding: .3rem;
+  margin: 1rem;
+
+  
+  
 }
 
 /* Heading */
@@ -82,7 +86,7 @@ ul li {
 
 #opennav {
   color: black;
-  font-size: 2.1rem;
+  font-size: 1.8rem;
   margin-bottom: 2rem;
   font-weight: bold;
 }
@@ -516,3 +520,104 @@ tr:nth-child(odd) {
   text-align: left;
   grid-template-rows: auto;
 }
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+}
+
+.lightbox {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.lightbox .caption {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+}
+/* Shared styles for all screen sizes */
+
+/* Add any shared styles here */
+
+/* Styles specific to medium-sized screens */
+@media (max-width: 768px) {
+  /* Add styles specific to medium-sized screens here */
+}
+
+/* Styles specific to small screens (e.g., mobile) */
+@media (max-width: 480px) {
+  /* Add styles specific to small screens (e.g., mobile) here */
+  .title {
+    text-align: center;
+  }
+
+  .title img {
+    display: block;
+    margin: 0 auto;
+  }
+
+  h1.kenai {
+    font-size: 24px;
+  }
+
+  h2.subheading {
+    font-size: 16px;
+  }
+
+  h2#directory {
+    text-align: center;
+  }
+
+  .photo {
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+    padding: 5px;
+    box-sizing: border-box;
+  }
+
+  .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .calendar {
+    margin-bottom: 10px;
+  }
+  
+  .calendar iframe {
+    width: 100%;
+    height: 400px;
+  }
+  
+}
+
+

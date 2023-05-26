@@ -12,7 +12,7 @@
   href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Delius+Unicase:wght@700&family=Didact+Gothic&display=swap"
   rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-  <link rel="icon" type="image/png" href="images/favicon.ico">
+  <link rel="icon" type="#" href="images/favicon.ico">
   <link href="styles/large.css" rel="stylesheet" />
   <link href="styles/medium.css" rel="stylesheet" />
   <link href="styles/small.css" rel="stylesheet" />
@@ -52,21 +52,25 @@
     <p></p>
   
     <h2 id="directory">Discover</h2>
-    <h3>Check out these places out</h3>
+    <h3>Check out these places</h3>
     <main>
       <div class="sidebar">
         <!-- Sidebar content goes here -->
-      </div>
-      <div class="main-content">
-        <!-- Main content with lazy-loaded images goes here -->
-      </div>
-    </main>
-    <div class="main-content">
-      <img class="lazy" src="images/USA-Alaska-Seward-pier-boats-on-edge-of-Resurrection-Bay-blog-564984847-ss-800x450-1.jpg" alt="Bear">
-      <img class="lazy" src="images/wooden-log-near-body-of-water.jpg" alt="Log">
-      <!-- Add more lazy-loaded images as needed -->
-    </div>
-    
+        <div class="sidebar">
+          <!-- Column 1: Calendar -->
+          <div class="calendar">
+            <h3>Calendar</h3>
+            <iframe src="https://calendar.google.com/calendar/embed?src=kenaichamberofcommerce%40gmail.com&ctz=America%2FAnchorage" style="border: 0" width="200%" height="300" frameborder="0" scrolling="no"></iframe>
+          </div>
+        
+          <!-- Column 2: Sidebar content -->
+          <div class="sidebar-content">
+            <!-- Add sidebar content here -->
+          </div>
+        </div>
+        </main>
+        
+     
   
     <!-- From directory.js local json file -->
     <div class="data"></div>
@@ -80,9 +84,37 @@
   <script src="scripts/localstorage.js"></script>
   <script src="scripts/gridlist.js"></script>
   <script src="scripts/navigation.js"></script>
+
+  <div class="gallery">
+    <div class="photo">
+      <img src="./images/kenai-river-fall.webp" alt="Photo 1">
+      <div class="caption">Eagle Landing</div>
+    </div>
+    <div class="photo">
+      <img src="./images/salmon-lots-web.webp" alt="Photo 2">
+      <div class="caption">Kenai River flows out to the ocean</div>
+    </div>
+    <div class="photo">
+      <img src="images/wooden log.webp" alt="Photo 3">
+      <div class="caption">Soldotna Lake</div>
+    </div>
+    <!-- Add more photos as needed -->
+  </div>
+
+  <div class="lightbox">
+    <span class="close">&times;</span>
+    <img class="lightbox-image" src="">
+    <div class="caption"></div>
+  </div>
+
+  <script src="scripts/lightbox.js"></script>
+  <script src="scripts/localstorage.js"></script>
+  <script src="scripts/gridlist.js"></script>
+  <script src="scripts/navigation.js"></script>
+  <script src="scripts/getdate.js"></script>
+
   
-
-
+</body>
   <footer>
     <p>
       &copy; <span id="copyrightyear"></span> | Gavin Hart | USA |
@@ -90,7 +122,7 @@
       <span id="updated"></span>
     </p>
   </footer>
-  <script src="scripts/getdate.js"></script>
-</body>
+  
+
 
 </html>
