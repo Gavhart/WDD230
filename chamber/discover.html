@@ -1,118 +1,157 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en-us">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Gavin Hart" />
+    <meta
+      name="description"
+      content="Directory Web Development for BYU Idaho, WDD230"
+    />
+    <title>Kenai Chamber of Commerce</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Delius+Unicase:wght@700&family=Didact+Gothic&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+    <link href="styles/large.css" rel="stylesheet" />
+    <link href="styles/medium.css" rel="stylesheet" />
+    <link href="styles/small.css" rel="stylesheet" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="author" content="Gavin Hart">
-  <meta name="description" content="Directory Web Development for BYU Idaho, WDD230">
-  <title>Kenai Chamber of Commerce</title>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Delius+Unicase:wght@700&family=Didact+Gothic&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-  <link href="styles/large.css" rel="stylesheet">
-  <link href="styles/medium.css" rel="stylesheet">
-  <link href="styles/small.css" rel="stylesheet">
-</head>
+  <body>
+    <!-- Navigation -->
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+        >&times;</a
+      >
+      <a href="./index.html">home</a>
+      <a href="discover.html" class="active">Discover</a>
+      <a href="joinus.html">Join us</a>
 
-<body>
-  <!-- Navigation -->
-  <div id="mySidenav" class="sidenav">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    <a href="./index.html">home</a>
-    <a href="discover.html" class="active">Discover</a>
-    <a href="joinus.html">Join us</a>
-
-    <p id="contactinfo">
-      Kenai City, Co.<br><br>
-      📪 300 Main Street, Kenai, AK <br>
-      💻 kenai@kcc.com<br>
-      📞 907-313-8520 <br>
-    </p>
-    <a href="https://www.instagram.com/">
-      <img src="images/instagram.svg" alt="Instagram camera Icon" width="64" height="64">
-    </a>
-    <a href="https://www.facebook.com">
-      <img src="images/facebook.svg" alt="Facebook letter F Icon" width="64" height="64">
-    </a>
-  </div>
-
-  <div id="scoot">
-    <div class="title">
-      <a href="index.html"><img src="images/commerce-black-logo.png" alt="Blacked out logo" width="80" height="80"></a>
-      <h1 class="kenai">Kenai.co</h1>
-      <h2 class="subheading">Unite The Community</h2>
+      <p id="contactinfo">
+        Kenai City, Co.<br /><br />
+        📪 300 Main Street, Kenai, AK <br />
+        💻 kenai@kcc.com<br />
+        📞 907-313-8520 <br />
+      </p>
+      <a href="https://www.instagram.com/">
+        <img
+          src="images/instagram.svg"
+          alt="Instagram camera Icon"
+          width="64"
+          height="64"
+        />
+      </a>
+      <a href="https://www.facebook.com">
+        <img
+          src="images/facebook.svg"
+          alt="Facebook letter F Icon"
+          width="64"
+          height="64"
+        />
+      </a>
     </div>
 
-    <span id="opennav" onclick="openNav()">&#9776; Menu</span>
+    <div id="scoot">
+      <div class="title">
+        <a href="index.html"
+          ><img
+            src="images/commerce-black-logo.png"
+            alt="Blacked out logo"
+            width="80"
+            height="80"
+        /></a>
+        <h1 class="kenai">Kenai.co</h1>
+        <h2 class="subheading">Unite The Community</h2>
+      </div>
 
-    <h2 id="directory">Discover</h2>
-    <h3>Check out these places</h3>
+      <span id="opennav" onclick="openNav()">&#9776; Menu</span>
 
-    <!-- From directory.js local json file -->
-    <div class="data"></div>
-    <div class="grid"></div>
+      <h2 id="directory">Discover</h2>
+      <h3>Check out these places</h3>
 
-  </div>
-</body>
-
-
+      <!-- From directory.js local json file -->
+      <div class="data"></div>
+      <div class="grid"></div>
+    </div>
   
-<main>
-  <div class="gallery">
-    <div class="photo">
-      <img src="./images/kenai-river-fall.webp" alt="Photo 1" loading="lazy">
-      <div class="caption">Eagle Landing</div>
-    </div>
-    <div class="photo">
-      <img src="./images/salmon-lots-web.webp" alt="Photo 2" loading="lazy">
-      <div class="caption">Kenai River flows out to the ocean</div>
-    </div>
-    <div class="photo">
-      <img src="images/wooden-log.webp" alt="Photo 3" loading="lazy">
-      <div class="caption">Soldotna Lake</div>
-    </div>
-      
+
+  <main>
+    <div class="main-container" style="display: flex; justify-content: space-around;">
+      <div class="gallery">
+        <!-- <div class="photo"> -->
+          <img
+            src="./images/kenai-river-fall.webp"
+            alt="Photo 1"
+            loading="lazy"
+          />
+          <div class="caption">Eagle Landing</div>
+        <!-- </div> -->
+        <!-- <div class="photo"> -->
+          <img src="./images/salmon-lots-web.webp" alt="Photo 2" loading="lazy" />
+          <div class="caption">Kenai River flows out to the ocean</div>
+        <!-- </div> -->
+        <!-- <div class="photo"> -->
+          <img src="images/wooden-log.webp" alt="Photo 3" loading="lazy" />
+          <div class="caption">Soldotna Lake</div>
+        <!-- </div> -->
+      </div>
+  
       <!-- Add more photos as needed -->
   
-        <!-- Column 1: Calendar -->
-        <div class="calendar">
-          <iframe src="https://calendar.google.com/calendar/embed?src=kenaichamberofcommerce%40gmail.com&ctz=America%2FAnchorage" style="border: 0" width="400" height="250"></iframe>
+      <!-- Column 1: Calendar -->
+      <div class="media">
+        <div class="calendar" style="margin-bottom: 2rem;">
+          <iframe
+            src="https://calendar.google.com/calendar/embed?src=kenaichamberofcommerce%40gmail.com&ctz=America%2FAnchorage"
+            style="border: 0"
+            width="400"
+            height="250"
+          ></iframe>
         </div>
         <!--video-->
         <div class="video">
-          <iframe width="400" height="315" src="https://www.youtube.com/embed/CjKqWRxaOWA" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          <iframe
+            width="400"
+            height="315"
+            src="https://www.youtube.com/embed/CjKqWRxaOWA"
+            title="YouTube video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
         </div>
+      </div>
 
-
-    <div class="lightbox">
-      <span class="close">&times;</span>
-      <img class="lightbox-image" alt="photo" src="light">
-      <div class="caption"></div>
+      <div class="lightbox">
+        <span class="close">&times;</span>
+        <img class="lightbox-image" alt="photo" src="light" />
+        <div class="caption"></div>
+      </div>
     </div>
   </main>
-
 
 
   <script src="scripts/lightbox.js"></script>
   <script src="scripts/navigation.js"></script>
   <script src="scripts/getdate.js"></script>
   <script src="scripts/script.js"></script>
-  
-
-  
 
   <footer>
     <div id="sidebar">
       <div id="sidebar-content"></div>
     </div>
-    
+
     <p>
       &copy; <span id="copyrightyear"></span> | Gavin Hart | USA |
       <a href="https://www.byui.edu/">BYUI Online Learning</a>
       <span id="updated"></span>
     </p>
   </footer>
-
+</body>
 </html>
