@@ -477,7 +477,7 @@ tr:nth-child(odd) {
 /* Thank you */
 #gracias {
   padding: 2rem;
-  background-color: #9a8c98;
+  background-color: burlywood;
   color: #22223b;
   font-size: 2rem;
   margin: 4rem;
@@ -659,3 +659,27 @@ tr:nth-child(odd) {
     margin-bottom: 20px;
   }
 }
+/* join us page */
+.rating {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.rating > input {
+  display: none;
+}
+
+.rating > label {
+  font-size: 24px;
+  color: #ddd;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.rating > input:checked ~ label,
+.rating > input:checked ~ label ~ label {
+  color: #ffc107;
+}
+

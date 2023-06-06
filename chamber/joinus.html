@@ -60,21 +60,22 @@
                     <form method="get" action="thanks.html">
                         <fieldset>
                             <legend>Contact Information</legend>
-                            <label>First Name
-                                <input pattern="[A-Za-z]{.2}" class="required" type="text" name="fname" placeholder="Maria" required>
-                            </label>
-                            <label>Last Name
-                                <input pattern="[A-Za-z]{.2}" class="required" type="text" name="lname" placeholder="Lopez" required>
-                            </label>
-                            <label>Title
-                                <input pattern="[A-Za-z]{.2}" type="text" name="title" placeholder="Engineer">
-                            </label>
-                            <label>Email
-                                <input type="email" class="required" name="email" placeholder="user@email.com" required>
-                            </label>
-                            <label>Cell Phone Number &nbsp;&nbsp;
-                                <input type="tel" name="phone" placeholder="###-###-####">
-                            </label>
+                            <label for="fname">First Name:</label>
+                            <input type="text" id="fname" name="fname" placeholder="Maria" required>
+                        
+                            <label for="lname">Last Name:</label>
+                            <input type="text" id="lname" name="lname" placeholder="Lopez" required>
+                        
+                            <label for="title">Title:</label>
+                            <input type="text" id="title" name="title" placeholder="Engineer">
+                        
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" placeholder="user@example.com" required>
+                        
+                            <label for="phone">Cell Phone Number:</label>
+                            <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="###-###-####">
+                        
+                            <button type="submit">Register</button>
                         </fieldset>
 
                         <fieldset>
@@ -95,9 +96,9 @@
                             <label>
                                 <select name="levels" id="selectlevel" onchange="selectResponse()">
                                     <option value="" disabled selected>Select Level...</option>
-                                    <option value="preston">Non-Profit</option>
-                                    <option value="soda-springs">Bronze</option>
-                                    <option value="fish-haven">Silver</option>
+                                    <option value="citizens">Non-Profit</option>
+                                    <option value="class">Bronze</option>
+                                    <option value="fish">Silver</option>
                                     <option value="gold">Gold</option>
                                 </select>
                             </label>
@@ -143,6 +144,20 @@
                                     <td>&check;</td>
                                     <td>&check;</td>
                                 </tr>
+
+                                <div class="rating">
+                                    <input type="radio" id="star5" name="rating" value="5">
+                                    <label for="star5" title="5 stars">&#9733;</label>
+                                    <input type="radio" id="star4" name="rating" value="4">
+                                    <label for="star4" title="4 stars">&#9733;</label>
+                                    <input type="radio" id="star3" name="rating" value="3">
+                                    <label for="star3" title="3 stars">&#9733;</label>
+                                    <input type="radio" id="star2" name="rating" value="2">
+                                    <label for="star2" title="2 stars">&#9733;</label>
+                                    <input type="radio" id="star1" name="rating" value="1">
+                                    <label for="star1" title="1 star">&#9733;</label>
+                                  </div>
+                                  
                             </table>
                             <input type="submit" value="Join" class="sbutton">
                         </fieldset>
@@ -162,6 +177,7 @@
         </footer>
 
         <script src="scripts/getdate.js"></script>
+        <script src="scripts/joinus.js"></script>
     </div>
 </body>
 
