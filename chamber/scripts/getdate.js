@@ -2,7 +2,7 @@
 
 //Date displayed in the footer
 let d = new Date();
-document.querySelector('#copyrightyear').textContent = d.getFullYear();
+// document.querySelector('#copyrightyear').textContent = d.getFullYear();
 const datefield = document.querySelector("#updated");
 
 //current date with that object
