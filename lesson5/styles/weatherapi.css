@@ -92,8 +92,8 @@ footer p {
     section img{
         max-width: 80%;
         object-fit: cover;
-        height: 400px;
-        width: 500px;
+        height: 200px;
+        width: 200px;
         
     }
 }
@@ -117,5 +117,6 @@ footer p {
     section {
         height: 500px;
     }
+    
 
 }

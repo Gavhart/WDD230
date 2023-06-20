@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="styles/main.css">
     <link rel="icon" href="images/favicon.ico">
     <link rel="stylesheet" href="lesson1/chamber-site-plan.html">
+    <link rel="stylesheet" href="lesson5/styles/weatherapi.css">
     
     
 </head>
@@ -88,6 +89,8 @@
                         <a class="sub_link" href="./lesson5/phrophets.html">Prophets</a>
                         <span class="divider">|</span>
                         <a class="sub_link" href="./lesson5/weatherapi.html">WeatherAPI</a>
+                        <span class="divider">|</span>
+                        <a class="sub_link" href="./lesson5/new-ward-members.json">JSON</a>
                     </li>
                     <li class="item">
                         <span class="sub_text">Week 6:</span>
@@ -103,10 +106,12 @@
         <section class="card information">
             <h3 class="title">Information</h3>
             <div class="text_contents">
-                <p class="text location">Anchorage, Alaska</p>
-                <div class="weather">
-                    <img class="weather_icon" src="images/mostly-Sunny.jpeg" alt="Cloud representing the weather" width="25" height="25">
-                    <span class="text weather_text">-26°C, Partly Cloudy</span>
+        <p>The current temperature in Fairbanks, Alaska is <span
+                id="current-temp"></span> &deg;F</p>
+        <figure>
+            <img src="" alt="weather" id="weather-icon" />
+            <figcaption></figcaption>
+        </figure>
                     <p class="text visit_count">Page Visits: <span id="visit_counter">100</span></p>
                 </div>
             </section>
@@ -121,5 +126,6 @@
     </footer>
     <script src="scripts/getDates.js"></script>
     <script src="scripts/main.js"></script>
+    <script src="lesson5/scripts/weatherapi.js"></script>
 </body>
 </html>
