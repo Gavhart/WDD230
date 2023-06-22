@@ -1,0 +1,76 @@
+{
+"business": [  
+ {
+    "name": "Roto Rooter Plumbing",
+    "field": "Plumbers",
+    "number": "(907) 262-5605",
+    "address": "297 North 750 East",
+    "logo": "Roto_Rooter.webp",
+    "website": "https://www.rotorooter.com/"
+   },
+   {
+    "name": "Forever Dance Alaska",
+    "field": "Dancers",
+    "number": "(907) 262-1641",
+    "address": "297 North 750 East",
+    "logo": "Dancer.jpeg",
+    "website": "https://foreverdancealaska.com/"
+   },
+   {
+    "name": "Sweet Nothings Bakery",
+    "field": "Bakery",
+    "number": "(720) 251-0637",
+    "address": "297 North 750 East",
+    "logo": "sweet.jpeg",
+    "website": "https://SweetNothingsBakery.net"
+   },
+   {
+    "name": "Playa Azul",
+    "field": "Restaurant",
+    "number": "(907) 283-2010",
+    "address": "141 North Main Street",
+    "logo": "playa.jpeg",
+    "website": "https://www.facebook.com/alaskaplayaazul/"
+   },
+   {
+    "name": "Kenai Veterinary Hospital",
+    "field": "Vetrinarian",
+    "number": "(907) 283-4148",
+    "address": "166 South Main Street",
+    "logo": "hospital.jpeg",
+    "website": "https://kenaiveterinaryhospital.com/"
+   },
+   {
+    "name": "Paisley Botique",
+    "field": "Clothing",
+    "number": "(907) 335-3345",
+    "address": "1571 Leola St.",
+    "logo": "clothes.jpeg",
+    "website": "https://www.facebook.com/paisleyboutiqueak/"
+   },
+   {
+    "name": "Tap and Grill",
+    "field": "Restaurant",
+    "number": "(907) 395-0394",
+    "address": "20 South Main Street",
+    "logo": "chicken.jpeg",
+    "website": "https://bcchickenkaysville.com"
+   },
+   {
+    "name": "Aspire Buisness Solutions LLC",
+    "field": "Consultants",
+    "number": "(907) 885-6664",
+    "address": "11 Main Street",
+    "logo": "Aspire.jpeg",
+    "website": "https://www.aspireokc.com"
+   },
+   {
+    "name": "Louie's Steak & Seafood",
+    "field": "Restaurant",
+    "number": "(907) 283-3660",
+    "address": "37 North Main Street",
+    "logo": "steak.jpeg",
+    "website": "https://www.louiessteakandseafood.com"
+   }
+]
+}

@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Gavin Hart">
+  <meta name="description" content="Directory Web Development for BYU Idaho, WDD230-01">
+  <title>Kenai Chamber of Commerce</title>
+  <link
+  href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Delius+Unicase:wght@700&family=Didact+Gothic&display=swap"
+  rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  <link rel="icon" type="images" href="images/favicon.ico">
+  <link href="styles/large.css" rel="stylesheet" />
+  <link href="styles/medium.css" rel="stylesheet" />
+  <link href="styles/small.css" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- Navigation -->
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="index.html">Home</a>
+    <a href="city.html">City</a>
+    <a href="directory.html" class="active">Directory</a>
+    <a href="contact.html">Contact</a>
+    <a href="joinus.html">Join us</a>
+
+    <p id="contactinfo">
+      Kenai, Co.<br /><br />
+        📪 300 Main Street, Kenai, AK <br />
+        💻 kenai@kcc.com<br />
+        📞 907-313-8520 <br />
+    </p>
+    <a href="https://www.instagram.com/">
+      <img src="images/instagram.svg" alt="Instagram camera Icon" width="64" height="64" />
+    </a>
+    <a href="https://www.facebook.com">
+      <img src="images/facebook.svg" alt="Facebook letter F Icon" width="64" height="64" />
+    </a>
+  </div>
+
+  <div id="scoot">
+    <div class="title">
+      <a href="index.html"><img src="images/Kenai.png" alt="Purple mountain logo" width="80" height="80"></a>
+      <h1 class="kenai">Kenai.co</h1>
+      <h2 class="subheading">Unite Our Community</h2>
+    </div>
+
+    <span id="opennav" onclick="openNav()">&#9776; Menu</span>
+    <p></p>
+
+    <h2 id="directory">Directory</h2>
+    <h3>Check out these local businesses!</h3>
+    <img src="images/list.svg" alt="list view" width="34" height="34" onclick="list()">
+    <img src="images/grid.svg" alt="grid view" width="34" height="34" onclick="grid()">
+
+    <!-- From directory.js local json file -->
+    <div class="data"></div>
+
+  </div>
+  <script src="scripts/navigation.js"></script>
+  <script src="scripts/city.js"></script>
+  <script src="scripts/currentconditions.js"></script>
+  <script src="scripts/getdate.js"></script>
+  <script src="scripts/directory.js"></script>
+
+
+  <footer>
+    &copy; <span id="copyrightyear"></span> | Gavin Hart | USA |
+    <a href="byui.edu/online">BYU-Idaho Online Learning</a>
+    <span id="updated"></span>
+  </footer>
+  <script src="js/getdate.js"></script>
+</body>
+
+</html>
