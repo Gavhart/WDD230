@@ -4,7 +4,8 @@
 /* ALL PAGES */
 * {
   box-sizing: border-box;
-  font-size: 15px;
+  font-size: 17px;
+  
 }
 
 body {
@@ -186,9 +187,10 @@ footer {
   float: left;
   width: 25%;
   background-color: black;
-  padding: 0.2rem;
-  color: #f2e9e4;
+  padding: 0.1rem;
+  color: #F2E9E4;
 }
+
 
 .column p {
   text-align: center;
@@ -208,7 +210,10 @@ footer {
 }
 
 .row .column {
-  padding: 0.05rem;
+  padding: 0.02rem;
+  
+
+
 }
 
 .row h2 {
@@ -217,13 +222,14 @@ footer {
 }
 
 .row p {
-  padding-left: 0.5rem;
+  padding-left: 0.1rem;
 }
 
 .row:after {
   content: "";
   display: table;
   clear: both;
+
 }
 
 #events {
@@ -398,7 +404,19 @@ form div {
   display: block;
   padding-top: 1rem;
   color: black;
+  
 }
+@media (max-width: 767px) {
+  .phone-row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .phone-row .column {
+    width: 100vw;
+  }
+}
+
+
 
 .sbutton {
   padding-right: 1rem;
