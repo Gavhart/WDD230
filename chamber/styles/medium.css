@@ -33,12 +33,5 @@
     .goals li {
       padding: .5rem;
     }
-    .image-grid-container {
-      display: grid;
-      grid-gap: 5px;
-    }
-    .image-grid-container img {
-      max-width: 100%;
-      height: auto;
-  }
+   
   }

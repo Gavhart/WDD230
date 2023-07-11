@@ -26,6 +26,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Store the current visit timestamp in localStorage
     localStorage.setItem("lastVisit", new Date().getTime());
+
+    
   }
 });
 
