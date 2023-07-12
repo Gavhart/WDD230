@@ -27,29 +27,42 @@
       top: 0;
       left: 0;
       width: 100%;
-      background-color: #ebd8d5;
-      color: rgb(101, 4, 4);
-      padding: 2px;
+      background-color: #f44336;
+      color: #fff;
+      padding: 10px;
       text-align: center;
-      opacity: 1;
+      display: none;
     }
 
     .alerts-heading {
-      font-size: 14px;
+      font-size: 16px;
       font-weight: bold;
       margin: 0;
     }
 
     .alerts-list {
-      margin-top: 5px;
+      margin-top: 10px;
     }
 
     .close {
-      color: rgb(151, 5, 5);
+      color: #fff;
       float: right;
       font-size: 20px;
       font-weight: bold;
       cursor: pointer;
+    }
+
+    /* Flexbox styles for side-by-side content */
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .column {
+      flex: 0 0 calc(25% - 20px);
+      margin-bottom: 20px;
+      box-sizing: border-box;
     }
   </style>
 </head>
@@ -57,14 +70,33 @@
 <body>
   <!-- Navigation -->
   <div id="mySidenav" class="sidenav">
-    <!-- ... -->
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="home.html">Home</a>
+    <a href="index.html">City</a>
+    <a href="directory.html" class="active">Directory</a>
+    <a href="joinus.html">Join us</a>
+
+    <p id="contactinfo">
+      Kenai, Co.<br /><br />
+      📪 300 Main Street, Kenai, AK <br />
+      💻 kenai@kcc.com<br />
+      📞 907-313-8520 <br />
+    </p>
+
+    <a href="https://www.instagram.com/">
+      <img src="images/instagram.svg" alt="Instagram camera Icon" width="64" height="64" />
+    </a>
+    <a href="https://www.facebook.com">
+      <img src="images/facebook.svg" alt="Facebook letter F Icon" width="64" height="64" />
+    </a>
   </div>
 
   <div id="scoot">
     <!-- Alert -->
     <aside class="alerts-banner" id="myBanner">
-      <p class="alerts-list">Attend the Chamber of Commerce Meet and Greet On Wednesday at 7:00 p.m.</p>
-      <button class="close" onclick="closeBanner()">x</button>
+      <p class="alerts-heading">Attend the Chamber of Commerce Meet and Greet</p>
+      <p class="alerts-list">On Wednesday at 7:00 p.m.</p>
+      <button class="close" onclick="closeBanner()">X</button>
     </aside>
 
     <div class="title">
@@ -73,16 +105,81 @@
       <h2 class="subheading">Unite Our Community</h2>
     </div>
 
-    <!-- ... -->
+    <span id="opennav" onclick="openNav()">&#9776; Menu</span>
+    <p></p>
+    <div class="row">
+      <div class="column block">
+        <h2>How's the Weather?</h2>
+        <img src="images/smlsunny.jpg" alt="sunny day" width="325" height="225">
 
-    <script>
-      function closeBanner() {
-        document.getElementById("myBanner").style.display = "none";
-      }
+        <!-- currentconditions.js -->
+        <p class="currents"></p>
+      </div>
 
-      // Display the banner initially
-      document.getElementById("myBanner").style.display = "block";
-    </script>
+      <div class="column">
+        <h2>Pipe Plumbing</h2>
+        <p>For All Your Plumbing Needs</p>
+        <a href="https://www.pipedreamsut.com/"><img class="gallerychild" src="images/Roto_Rooter.webp" width="325"
+            height="325" alt="Pipe Dreams Plumbing logo"></a>
+      </div>
+      <div class="column">
+
+        <img class="gallerychild" src="images/couple350w.jpg" alt="A picture of a family" width="325" height="430">
+      </div>
+      <div class="column">
+        <a href="https://clytieadams.com/"><img class="gallerychild" src="images/ballet.png" width="325" height="325"
+            alt="Ballerina holding a pose"></a>
+        <h2>Clytie Adams</h2>
+        <p> Ballet Excellence</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="column">
+        <img class="gallerychild" src="images/kiki.jpg" alt="A picture of a family" width="325" height="418">
+      </div>
+      <div id="thisweek" class="column block">
+        <h2>This week in Kenai!</h2>
+        <p id="events">
+          &nbsp;Thursday, July 15, 2021<br> &emsp;Final sign-up for recreational sports<br><br>
+          &nbsp;Saturday, July 17, 2021<br> &emsp;Q&A with City Council<br><br>
+          &nbsp;Wednesday, July 21, 2021<br> &emsp;Meet the 2021 Candidates<br><br>
+          &nbsp;Friday, July 23, 2021<br> &emsp;Pioneer Day Breakfast at Bowman's<br><br>
+          &nbsp;Saturday, July 31, 2021<br> &emsp;Community Play<br><br>
+          &nbsp;Tuesday, August 3, 2021<br> &emsp;Power Commission Meeting
+        </p>
+      </div>
+      <div class="column">
+        <h2>Sweet Cakes</h2>
+        <p>Delicious Gluten-Free Sweets</p>
+        <a href="https://www.sweetcakebakeshop.com/"><img class="gallerychild" src="images/cakes.jpeg" width="325"
+            height="311" alt="A fondant harry potter cake"></a>
+      </div>
+      <div class="block column">
+        <!-- Three Day Forecast using threeday.js -->
+        <h2>Forecast</h2>
+        <div class="daily"></div>
+        <img class="gallerychild blossom" src="images/sun-icon.svg" alt="Pink blossoms against a light blue sky"
+          width="325" height="230">
+      </div>
+    </div>
+    <div class="join block">
+      <h2>Join us!</h2>
+      <p>Are you ready to jump in and do something? Our purpose is to grow closer together by supporting one another.
+        We strive to create a healthy and a thriving community. <br>We cannot accomplish our goals without you! <br>Click <a id="joinus"
+          href="joinus.html">here</a> to learn more. </p>
+      <ul>
+        <li>We aim to:</li>
+        <li>Connect and empathize with our neighbors </li>
+        <li>Provide resources to those in need</li>
+        <li>Create safe environments for our children</li>
+        <li>Learn and grow</li>
+        <li>Maintain a clean environment</li>
+        <li>Ensure every member feels welcome</li>
+        <li>Empathize with our elderly neighbors</li>
+      </ul>
+    </div>
+
   </div>
 
   <script src="scripts/navigation.js"></script>
@@ -91,13 +188,24 @@
 
   <footer>
     <p>
-      &copy; <span id="copyrightyear"></span> | Gavin Hart | USA |
-      <a href="https://www.byui.edu/">BYUI Online Learning
+      &copy; <span id="currentyear"></span> | Gavin Hart | USA |
+      <a href="https://www.byui.edu/">BYUI Online Learning</a> |
+      <a href="attributions.html">Attributions</a> |
       <span id="updated"></span>
     </p>
   </footer>
 
   <script src="scripts/getdate.js"></script>
+  <script>
+    function closeBanner() {
+      document.getElementById("myBanner").style.display = "none";
+    }
+
+    // Display the banner after a few seconds
+    setTimeout(function () {
+      document.getElementById("myBanner").style.display = "block";
+    }, 3000);
+  </script>
 </body>
 
 </html>
