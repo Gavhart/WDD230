@@ -8,48 +8,91 @@
   <meta name="author" content="Gavin Hart">
   <meta name="description" content="Home Web Development for BYU Idaho, WDD230-01">
   <title>Kenai Chamber of Commerce</title>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Delius+Unicase:wght@700&family=Didact+Gothic&display=swap"
-    rel="stylesheet"
-  />
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
-  />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Delius+Unicase:wght@700&family=Didact+Gothic&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
   <link rel="icon" type="image/png" href="images/favicon.ico" />
   <link href="styles/small.css" rel="stylesheet" />
   <link href="styles/medium.css" rel="stylesheet" />
   <link href="styles/large.css" rel="stylesheet" />
   <style>
     /* Styles for the banner */
-    .alerts-banner {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      background-color: #f44336;
-      color: #fff;
-      padding: 10px;
+    .box {
+      width: 20%;
+      margin: 0 auto;
+      background: rgba(255, 255, 255, 0.2);
+      padding: 35px;
+      border-radius: 20px/50px;
+      background-clip: padding-box;
       text-align: center;
-      display: none;
     }
 
-    .alerts-heading {
-      font-size: 16px;
-      font-weight: bold;
-      margin: 0;
-    }
-
-    .alerts-list {
-      margin-top: 10px;
-    }
-
-    .close {
-      color: #fff;
-      float: right;
-      font-size: 20px;
-      font-weight: bold;
+    .button {
+      font-size: 1em;
+      padding: 10px;
+      color: red;
+      border: 2px solid orange;
+      border-radius: 20px/50px;
+      text-decoration: none;
       cursor: pointer;
+      transition: all 0.3s ease-out;
+    }
+
+    .button:hover {
+      background: orange;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0, 0, 0, 0.7);
+      transition: opacity 500ms;
+      visibility: hidden;
+      opacity: 0;
+    }
+
+    .overlay:target {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .popup {
+    margin: 70px auto;
+    padding: 20px;
+    background: rgb(244, 19, 19);
+    border-radius: 5px;
+    width: 80%; /* Adjust the width to fit the mobile view */
+    max-width: 400px; /* Set a maximum width for larger screens */
+    position: relative;
+    transition: all 5s ease-in-out;
+  }
+
+    .popup h2 {
+      margin-top: 0;
+      color: #333;
+      font-family: Tahoma, Arial, sans-serif;
+    }
+
+    .popup .close {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      transition: all 200ms;
+      font-size: 30px;
+      font-weight: bold;
+      text-decoration: none;
+      color: #333;
+    }
+
+    .popup .close:hover {
+      color: orange;
+    }
+
+    .popup .content {
+      max-height: 30%;
+      overflow: auto;
     }
 
     /* Flexbox styles for side-by-side content */
@@ -63,6 +106,30 @@
       flex: 0 0 calc(25% - 20px);
       margin-bottom: 20px;
       box-sizing: border-box;
+    }
+
+    /* Responsive styles for mobile */
+    @media (max-width: 767px) {
+      .row {
+        flex-wrap: wrap;
+      }
+
+      .column {
+        flex: 0 0 100%;
+        margin-bottom: 20px;
+      }
+    }
+
+    /* Additional styles you provided */
+    .overlay {
+      transition: opacity 500ms;
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    .overlay:target {
+      opacity: 0;
+      pointer-events: none;
     }
   </style>
 </head>
@@ -92,12 +159,21 @@
   </div>
 
   <div id="scoot">
-    <!-- Alert -->
-    <aside class="alerts-banner" id="myBanner">
-      <p class="alerts-heading">Attend the Chamber of Commerce Meet and Greet</p>
-      <p class="alerts-list">On Wednesday at 7:00 p.m.</p>
-      <button class="close" onclick="closeBanner()">X</button>
-    </aside>
+    <div class="box">
+      <!-- This shows the popup. -->
+      <a class="button" href="#popup1">Reminder!</a>
+    </div>
+
+    <div id="popup1" class="overlay">
+      <div class="popup">
+        <h2>Here I am</h2>
+        <!-- This hides it. -->
+        <a class="close" href="#popup1">×</a>
+        <div class="content">
+          Chamber of Commerce meet and greet on Wednesday at 7:00 p.m.
+        </div>
+      </div>
+    </div>
 
     <div class="title">
       <a href="index.html"><img src="images/commerce-black-logo.png" alt="Purple mountain logo" width="80" height="80"></a>
@@ -119,16 +195,13 @@
       <div class="column">
         <h2>Pipe Plumbing</h2>
         <p>For All Your Plumbing Needs</p>
-        <a href="https://www.pipedreamsut.com/"><img class="gallerychild" src="images/Roto_Rooter.webp" width="325"
-            height="325" alt="Pipe Dreams Plumbing logo"></a>
+        <a href="https://www.pipedreamsut.com/"><img class="gallerychild" src="images/Roto_Rooter.webp" width="325" height="325" alt="Pipe Dreams Plumbing logo"></a>
       </div>
       <div class="column">
-
         <img class="gallerychild" src="images/couple350w.jpg" alt="A picture of a family" width="325" height="430">
       </div>
       <div class="column">
-        <a href="https://clytieadams.com/"><img class="gallerychild" src="images/dancer.jpeg" width="325" height="325"
-            alt="Ballerina holding a pose"></a>
+        <a href="https://clytieadams.com/"><img class="gallerychild" src="images/dancer.jpeg" width="325" height="325" alt="Ballerina holding a pose"></a>
         <h2>Forever Dance Alaska</h2>
         <p> Ballet Excellence</p>
       </div>
@@ -152,22 +225,19 @@
       <div class="column">
         <h2>Sweet Cakes</h2>
         <p>Delicious Gluten-Free Sweets</p>
-        <a href="https://www.sweetcakebakeshop.com/"><img class="gallerychild" src="images/cakes.jpeg" width="325"
-            height="311" alt="A fondant harry potter cake"></a>
+        <a href="https://www.sweetcakebakeshop.com/"><img class="gallerychild" src="images/cakes.jpeg" width="325" height="311" alt="A fondant harry potter cake"></a>
       </div>
       <div class="block column">
         <!-- Three Day Forecast using threeday.js -->
         <h2>Forecast</h2>
         <div class="daily"></div>
-        <img class="gallerychild blossom" src="images/sun-icon.svg" alt="Pink blossoms against a light blue sky"
-          width="325" height="230">
+        <img class="gallerychild blossom" src="images/sun-icon.svg" alt="Pink blossoms against a light blue sky" width="325" height="230">
       </div>
     </div>
     <div class="join block">
       <h2>Join us!</h2>
       <p>Are you ready to jump in and do something? Our purpose is to grow closer together by supporting one another.
-        We strive to create a healthy and a thriving community. <br>We cannot accomplish our goals without you! <br>Click <a id="joinus"
-          href="joinus.html">here</a> to learn more. </p>
+        We strive to create a healthy and thriving community. <br>We cannot accomplish our goals without you! <br>Click <a id="joinus" href="joinus.html">here</a> to learn more. </p>
       <ul>
         <li>We aim to:</li>
         <li>Connect and empathize with our neighbors </li>
@@ -179,7 +249,6 @@
         <li>Empathize with our elderly neighbors</li>
       </ul>
     </div>
-
   </div>
 
   <script src="scripts/navigation.js"></script>
@@ -195,16 +264,6 @@
   </footer>
 
   <script src="scripts/getdate.js"></script>
-  <script>
-    function closeBanner() {
-      document.getElementById("myBanner").style.display = "none";
-    }
-
-    // Display the banner after a few seconds
-    setTimeout(function () {
-      document.getElementById("myBanner").style.display = "block";
-    }, 3000);
-  </script>
 </body>
 
 </html>
