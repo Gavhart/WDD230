@@ -526,12 +526,6 @@ tr:nth-child(odd) {
   grid-template-rows: auto;
 }
 
-.gallery img {
-  height: auto;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-  flex-direction: column wrap;
-}
 
 .lightbox {
   display: none;
