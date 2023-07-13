@@ -15,86 +15,6 @@
   <link href="styles/medium.css" rel="stylesheet" />
   <link href="styles/large.css" rel="stylesheet" />
   <style>
-    /* Styles for the banner */
-    .box {
-      width: 20%;
-      margin: 0 auto;
-      background: rgba(255, 255, 255, 0.2);
-      padding: 35px;
-      border-radius: 20px/50px;
-      background-clip: padding-box;
-      text-align: center;
-    }
-
-    .button {
-      font-size: 1em;
-      padding: 10px;
-      color: red;
-      border: 2px solid orange;
-      border-radius: 20px/50px;
-      text-decoration: none;
-      cursor: pointer;
-      transition: all 0.3s ease-out;
-    }
-
-    .button:hover {
-      background: orange;
-    }
-
-    .overlay {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background: rgba(0, 0, 0, 0.7);
-      transition: opacity 500ms;
-      visibility: hidden;
-      opacity: 0;
-    }
-
-    .overlay:target {
-      visibility: visible;
-      opacity: 1;
-    }
-
-    .popup {
-    margin: 70px auto;
-    padding: 20px;
-    background: rgb(244, 19, 19);
-    border-radius: 5px;
-    width: 80%; /* Adjust the width to fit the mobile view */
-    max-width: 400px; /* Set a maximum width for larger screens */
-    position: relative;
-    transition: all 5s ease-in-out;
-  }
-
-    .popup h2 {
-      margin-top: 0;
-      color: #333;
-      font-family: Tahoma, Arial, sans-serif;
-    }
-
-    .popup .close {
-      position: absolute;
-      top: 20px;
-      right: 30px;
-      transition: all 200ms;
-      font-size: 30px;
-      font-weight: bold;
-      text-decoration: none;
-      color: #333;
-    }
-
-    .popup .close:hover {
-      color: orange;
-    }
-
-    .popup .content {
-      max-height: 30%;
-      overflow: auto;
-    }
-
     /* Flexbox styles for side-by-side content */
     .row {
       display: flex;
@@ -113,28 +33,72 @@
       .row {
         flex-wrap: wrap;
       }
+    @media (max-width: 100%) {
+      .row {
+        flex-wrap: wrap;
+      }
+    }
 
       .column {
         flex: 0 0 100%;
         margin-bottom: 20px;
       }
-    }
 
-    /* Additional styles you provided */
-    .overlay {
-      transition: opacity 500ms;
-      opacity: 1;
-      pointer-events: all;
-    }
+      html,
+      body {
+        margin: 0;
+      }
 
-    .overlay:target {
-      opacity: 0;
-      pointer-events: none;
+      .banner {
+        background: red;
+        color: #ffffff;
+        font-size: 14px;
+        position: fixed;
+        padding: top 10px;
+      }
+
+      .banner__content {
+        padding: 30px;
+        max-width: 500px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+      }
+
+      .banner__text {
+        flex-grow: 1;
+        line-height: 1.4;
+        font-family: "Quicksand", sans-serif;
+      }
+
+      .banner__close {
+        background: none;
+        border: none;
+        cursor: pointer;
+      }
+
+      .banner__text,
+      .banner__close > span {
+        color: #ffffff;
+      }
     }
   </style>
 </head>
 
 <body>
+  <div class="banner">
+    <div class="banner__content">
+      <div class="banner__text">
+        <strong>Reminder:</strong> Chamber of Commerce meet and greet on Wednesday at 7:00 p.m.
+      </div>
+      <button class="banner__close" type="button">
+        <span class="material-icons">
+          X
+        </span>
+      </button>
+    </div>
+  </div>
+
   <!-- Navigation -->
   <div id="mySidenav" class="sidenav">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -159,22 +123,6 @@
   </div>
 
   <div id="scoot">
-    <div class="box">
-      <!-- This shows the popup. -->
-      <a class="button" href="#popup1">Reminder!</a>
-    </div>
-
-    <div id="popup1" class="overlay">
-      <div class="popup">
-        <h2>Here I am</h2>
-        <!-- This hides it. -->
-        <a class="close" href="#popup1">×</a>
-        <div class="content">
-          Chamber of Commerce meet and greet on Wednesday at 7:00 p.m.
-        </div>
-      </div>
-    </div>
-
     <div class="title">
       <a href="index.html"><img src="images/commerce-black-logo.png" alt="Purple mountain logo" width="80" height="80"></a>
       <h1 class="kaysville">Kaysville.co</h1>
@@ -187,7 +135,6 @@
       <div class="column block">
         <h2>How's the Weather?</h2>
         <img src="images/smlsunny.jpg" alt="sunny day" width="325" height="225">
-
         <!-- currentconditions.js -->
         <p class="currents"></p>
       </div>
@@ -237,7 +184,7 @@
     <div class="join block">
       <h2>Join us!</h2>
       <p>Are you ready to jump in and do something? Our purpose is to grow closer together by supporting one another.
-        We strive to create a healthy and thriving community. <br>We cannot accomplish our goals without you! <br>Click <a id="joinus" href="joinus.html">here</a> to learn more. </p>
+        We strive to create a healthy and a thriving community. <br>We cannot accomplish our goals without you! <br>Click <a id="joinus" href="joinus.html">here</a> to learn more. </p>
       <ul>
         <li>We aim to:</li>
         <li>Connect and empathize with our neighbors </li>
@@ -264,6 +211,11 @@
   </footer>
 
   <script src="scripts/getdate.js"></script>
+  <script>
+    document.querySelector(".banner__close").addEventListener("click", function () {
+      this.closest(".banner").style.display = "none";
+    });
+  </script>
 </body>
 
 </html>
